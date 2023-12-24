@@ -29,7 +29,7 @@ const ProductDetails = () => {
       des,
       userEmail: userReducer?.email,
     };
-    axios.post("http://localhost:5000/cart", data).then((res) => {
+    axios.post("https://sports-master-server-hafizur27.vercel.app/cart", data).then((res) => {
       if (res?.data?.insertedId || res?.data?.result?.modifiedCount) {
         dispatch(addTOCart(data));
         toast.success("Product Added Successfully ", {position: 'top-right'})

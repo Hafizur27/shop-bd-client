@@ -10,7 +10,7 @@ const LogIn = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/login", data).then((res) => {
+    axios.post("https://sports-master-server-hafizur27.vercel.app/login", data).then((res) => {
       if (res.data.modifiedCount !== 0) {
         localStorage.setItem("token", res.data.token);
         dispatch(

@@ -14,7 +14,7 @@ const NavBar = () => {
   
 
   const handleLogOut = () => {
-    axios.post("http://localhost:5000/logout", {user: userReducer}).then((res) => {
+    axios.post("https://sports-master-server-hafizur27.vercel.app/logout", {user: userReducer}).then((res) => {
       if (res.data.modifiedCount !== 1) {
         localStorage.removeItem("token");
         dispatch(addUser({ email: "", token: "" }));

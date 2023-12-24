@@ -12,7 +12,7 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) =>{
-    axios.post("http://localhost:5000/register", data)
+    axios.post("https://sports-master-server-hafizur27.vercel.app/register", data)
     .then(res => {
       if(res.data.insertedId){
         toast.success("Thanks For Registration", {position: 'top-right'})

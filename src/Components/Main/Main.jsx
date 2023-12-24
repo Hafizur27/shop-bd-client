@@ -13,13 +13,13 @@ const Main = () => {
   useEffect(() => {
     if (token) {
       axios
-        .post("http://localhost:5000/checktoken", {
+        .post("https://sports-master-server-hafizur27.vercel.app/checktoken", {
           token: token,
         })
         .then((res) => {
           dispatch(addUser(res.data));
           axios
-            .get("http://localhost:5000/cart")
+            .get("https://sports-master-server-hafizur27.vercel.app/cart")
             .then((res) => dispatch(addTOCart(res?.data[0]?.products)));
         });
     }

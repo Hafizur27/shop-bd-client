@@ -7,7 +7,7 @@ const Products = () => {
   // const allProducts = useLoaderData() || {};
   const [allProducts, setAllProducts] = useState([]);
   useEffect(()=> {
-    axios.get("http://localhost:5000/products")
+    axios.get("https://sports-master-server-hafizur27.vercel.app/products")
     .then(res => setAllProducts(res.data))
   }, [])
 
