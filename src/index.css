@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li a:active{
+    background: none !important;
+}
+li a:hover{
+    background: none !important;
+}
+li a:focus{
+    background: none !important;
+    color: black !important;
+    font-weight: 700 !important;
+}
